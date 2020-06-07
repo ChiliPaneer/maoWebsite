@@ -1,0 +1,242 @@
+body {
+    margin: 0px 0px;
+    padding: 0px;
+    background: linear-gradient(rgba(255, 109, 227, .02), rgba(255, 109, 227, .02)), url("cubes.png");
+    background-size: 3%;
+    
+}
+
+
+h1 {
+    font-family: sans-serif;
+}
+
+
+
+
+header {
+    margin: 0px 0px;
+    height: 500px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.92);
+    position: relative;
+
+
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: 100%;
+
+}
+
+
+#headerText {
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.89);
+
+}
+
+#headerImage {
+    background-image: url("state_group2.jpg");
+    background-position: center;
+    /*filter: blur(5px); */
+    width: 100%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bar {
+    animation-name: shrink;
+    animation-duration: .5s;
+    background: linear-gradient(45deg, #f248be, #9198e5, #25f8f8);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.12);
+    margin: 0% 5%;
+    margin-top: 10%;
+    padding: 5px;
+    border-radius: 20px;
+
+
+}
+
+.bar:hover {
+    animation-name: expand;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(100%);
+    }
+
+    100% {
+        transform: scale(103%);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(103%);
+
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+
+
+.textSurface {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 150%;
+
+}
+
+
+#officers{
+    margin-top: 120px;
+    text-align: center;
+    height: 20px;
+    font-size: 40px;
+}
+
+.officerContainer {
+    display: flex;
+    flex-wrap: wrap;
+      
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0px 2%
+}
+
+.officerColumn{
+    flex: 50%;
+    max-width 50%
+}
+
+.officer{
+    position: relative;
+    background: linear-gradient(45deg, #ffb3e8, #9198e5, #8bf4f4);
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: 10%;
+    vertical-align: middle;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.22);
+    
+   
+}
+.headshot{
+    display:block;
+    width: 100%;
+
+    border-radius: 20px;
+    margin: auto;
+    
+   
+}
+
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, rgba(255, 179, 232, 0.51), rgba(145, 152, 229, 0.5), rgba(139, 244, 244, 0.38));
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    border-radius: 20px;
+    transition: .35s ease;
+}
+
+.officer:hover .overlay{
+    bottom: 0;
+    height: 100%;
+    
+}
+
+.officerText{
+
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@media (min-width: 600px) and (max-width: 1400px) {
+    .bar {
+        margin: 100px 0px 0px 0px;
+    }
+
+    .leftBar {
+
+        margin-right: 30%;
+        border-radius: 0px 20px 20px 0px;
+        padding: 5px 5px 5px 0px;
+    }
+
+    .rightBar {
+
+        margin-left: 30%;
+        border-radius: 20px 0px 0px 20px;
+        padding: 5px 0px 5px 5px;
+    }
+
+    .textSurfaceLeft {
+
+        border-radius: 0px 20px 20px 0px;
+        padding: 10px;
+        padding-left: 30%;
+
+    }
+
+    .textSurfaceRight {
+
+        border-radius: 20px 0px 0px 20px;
+        padding-left: 20px;
+        padding-right: 30%;
+
+    }
+
+    .officerColumn {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+
+}
+
+
+
+
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .officerColumn{
+        flex: 25%;
+        max-width: 25%;
+    }
+
+}
