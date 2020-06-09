@@ -208,7 +208,7 @@ li a {
     right: 0;
     /*background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
     */
-    background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
+    background: linear-gradient(45deg, rgba(255, 130, 255, 0.9), rgba(160, 120, 255, 0.9), rgba(130, 255, 245, 0.9));
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -300,6 +300,10 @@ footer {
         max-width: 80%
     }
 
+    .overlay{
+        background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
+    }
+
 
 }
 
@@ -316,6 +320,10 @@ footer {
     .officerColumn {
         flex: 25%;
         max-width: 25%;
+    }
+
+    .overlay{
+        background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
     }
 
 }
