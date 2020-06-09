@@ -167,12 +167,12 @@ li a {
 
     max-width: 1200px;
     margin: 200px auto;
-    padding: 0px 2%
+    padding: 0px 2%;
 }
 
 .officerColumn {
     flex: 50%;
-    max-width 50%
+    max-width: 50%;
 }
 
 .officer {
@@ -234,7 +234,7 @@ li a {
 }
 
 .caption{
-    background;
+ 
     border-radius: 0px 0px 10px 10px;
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
