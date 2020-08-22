@@ -3,7 +3,7 @@
 body {
     margin: 0px 0px;
     padding: 0px;
-    background: linear-gradient(rgba(255, 109, 227, .02), rgba(255, 109, 227, .02)), url("cubes.png");
+    background: linear-gradient(rgba(255, 109, 227, .02), rgba(255, 109, 227, .02)), url("/images/cubes.png");
     background-size: 3%;
 
 }
@@ -79,6 +79,15 @@ li a {
 
 }
 
+.containerMiniMu{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.miniMuBar{
+    margin:20px;
+}
+
 
 #headerText {
     text-align: center;
@@ -92,7 +101,7 @@ li a {
 }
 
 #headerImage {
-    background-image: url("state_group2.jpg");
+    background-image: url("/images/state_group2.jpg");
     background-position: center;
     /*filter: blur(5px); */
     width: 100%;
@@ -114,6 +123,7 @@ li a {
 
 
 }
+
 
 .bar:hover {
     animation-name: expand;
@@ -208,7 +218,7 @@ li a {
     right: 0;
     /*background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
     */
-    background: linear-gradient(45deg, rgba(255, 130, 255, 0.9), rgba(160, 120, 255, 0.9), rgba(130, 255, 245, 0.9));
+    background: linear-gradient(45deg, rgba(255, 130, 255, 0.9), rgba(160, 120, 255, 0.8), rgba(130, 255, 245, 0.9));
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -255,7 +265,7 @@ footer {
 }
 
 
-
+/*This is for mid width, the cards will attatch to the sides.*/
 @media (min-width: 600px) and (max-width: 1400px) and (max-height:1400px) {
     .bar {
         margin: 100px 0px 0px 0px;
@@ -301,15 +311,29 @@ footer {
     }
 
     .overlay{
-        background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
+        background: linear-gradient(45deg, rgba(255, 130, 255, 0.9), rgba(160, 120, 255, 0.8), rgba(130, 255, 245, 0.9));
     }
+
+    .miniMuBar{
+        margin:0% 5%;
+        margin-top: 10%;
+    }
+ 
+
+
 
 
 }
 
+/*This makes the officer section 4 columns at 1100 pixels*/
+@media screen and (min-width:1100px){
+    .officerColumn {
+        flex: 25%;
+        max-width: 25%;
+    }
+}
 
-
-
+/*This is the widescreen mode. The cards are in 2 column, and the officers are in 4 column*/
 @media screen and (min-width: 1400px) {
     .container {
         max-width: 1200px;
@@ -317,13 +341,29 @@ footer {
         grid-template-columns: 50% 50%;
     }
 
+
     .officerColumn {
         flex: 25%;
         max-width: 25%;
     }
 
     .overlay{
-        background: linear-gradient(45deg, rgba(255, 130, 255, 0.5), rgba(160, 120, 255, 0.5), rgba(130, 255, 245, 0.5));
+        background: linear-gradient(45deg, rgba(255, 130, 255, 0.9), rgba(160, 120, 255, 0.8), rgba(130, 255, 245, 0.9));
+    }
+
+  
+}
+
+/*Adjusts the cards on the MiniMu page. Stuff is a little different because of the large Tests section.*/
+@media screen and (min-width: 800px){
+
+    .miniMuBar{
+        margin:60px 30px 0px 30px;
+    }
+    .containerMiniMu {
+        max-width: 1400px;
+        margin: auto auto 100px auto;
+        grid-template-columns: 40% 60%;
     }
 
 }
