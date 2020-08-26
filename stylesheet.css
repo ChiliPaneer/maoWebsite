@@ -3,7 +3,7 @@
 body {
     margin: 0px 0px;
     padding: 0px;
-    background: linear-gradient(rgba(255, 109, 227, .02), rgba(255, 109, 227, .02)), url("/images/cubes.png");
+    background: linear-gradient(rgba(255, 109, 227, .02), rgba(255, 109, 227, .02)), url("images/cubes.png");
     background-size: 3%;
 
 }
